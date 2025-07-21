@@ -5,7 +5,7 @@ import fetch from "node-fetch"; // required outside Next.js
 const redis = Redis.fromEnv(); // or directly using Redis({...})
 
 export default async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "https://mediastack-api-gamma.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
