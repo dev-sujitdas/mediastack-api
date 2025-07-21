@@ -1,18 +1,8 @@
 {
   "name": "mediastack-api",
   "version": "1.0.0",
-<<<<<<< HEAD
   "type": "module",
   "dependencies": {
     "@upstash/redis": "^1.35.1"
   }
 }
-=======
-  "scripts": {},
-  "dependencies": {
-    "@upstash/redis": "^1.35.1",
-    "node-fetch": "^3.3.2"
-  },
-  "type": "module"
-}
->>>>>>> 8bd6465fc8ec21243f2527109fce96c7219f063c
