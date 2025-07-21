@@ -20,7 +20,8 @@ export default async function handler(req, res) {
       return res.status(200).json({ data: JSON.parse(cached) });
     }
 
-    const apiKey = d8f89db2a329fc7f8de47b8b6bec02e6;
+ const apiKey = process.env.MEDIASTACK_KEY;
+
     if (!apiKey) {
       return res.status(500).json({ error: "Missing API key" });
     }
@@ -32,8 +33,7 @@ export default async function handler(req, res) {
     await redis.set("mediastack:top", JSON.stringify(result.data), { ex: 900 });
 
     return res.status(200).json({ data: result.data });
-
-    return res.status(200).json({ data: result.data });
+    
   } catch (error) {
     console.error("API error:", error);
     return res.status(500).json({ error: error.message || "Unknown server error" });
