@@ -20,7 +20,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ data: JSON.parse(cached) });
     }
 
-    const apiKey = d8f89db2a329fc7f8de47b8b6bec02e6;
+    const apiKey = "d8f89db2a329fc7f8de47b8b6bec02e6";
     if (!apiKey) {
       return res.status(500).json({ error: "Missing API key" });
     }
