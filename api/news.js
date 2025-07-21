@@ -18,12 +18,12 @@ export default async function handler(req, res) {
       return res.status(200).json(JSON.parse(cached));
     }
 
-    const apiKey = process.env.Mediastack_API_Key;
-    if (!apiKey) {
-      throw new Error("Missing Mediastack_API_Key env variable");
-    }
+   // const apiKey = process.env.Mediastack_API_Key;
+    //if (!apiKey) {
+     // throw new Error("Missing Mediastack_API_Key env variable");
+   // }
 
-    const api = `http://api.mediastack.com/v1/news?access_key=${apiKey}&countries=za`;
+    const api = `http://api.mediastack.com/v1/news?access_key=d8f89db2a329fc7f8de47b8b6bec02e6&countries=za`;
 
     const response = await fetch(api);
     const data = await response.json();
